@@ -288,8 +288,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <label for="desc">Descprition</label>
                 <textarea class="form-control" name="desc" placeholder="Decription"></textarea>
                 <br/>
-                <label for="condition">Condition</label>
-                <input class="form-control" name="condition" type="text" placeholder="Condition">
+                <label for="condition">Category</label>
+                <select class="dv-get-all:rosefabrics:categories">
+                    <option class="set-value:var-id var-name"></option>
+                </select>
+                <br/>
                 <br/>
                 <label for="price">Price</label>
                 <input class="form-control" name="price" type="number" placeholder="Price">
@@ -311,6 +314,33 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="addNewCategory" tabindex="-1" role="dialog" aria-labelledby="addNewCategoryLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addNewCategoryLabel">Create New Category</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        <div class="modal-body">
+                <div class="dv-notify-success" style="color: green">Category was successfully created</div>
+                <div class="dv-notify-failed" style="color: red">Category could not be created</div>
+                <form class="dv-add-oneto:rosefabrics:categories">
+                    <label for="body">Name</label>
+                    <textarea class="form-control" name="name" placeholder="Decription"></textarea>
+        </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Save</button>
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <!--main content start-->
 <section id="main-content">
 	<section class="wrapper">
@@ -350,8 +380,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </div>
 
                             <div class="btn-group">
-                                <a data-original-title="Refresh" data-placement="top" data-toggle="dropdown" href="#" class="btn mini tooltips">
-                                    <i class=" fa fa-refresh"></i>
+                                <a data-toggle="modal" data-target="#addNewCategory" href="" class="btn mini tooltips">
+                                    <i class="fa fa-plus"></i>
                                 </a>
                             </div>
                             <ul class="unstyled inbox-pagination">
